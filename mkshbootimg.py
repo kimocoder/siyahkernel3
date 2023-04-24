@@ -3,8 +3,7 @@ import sys, os
 
 def copydata(outfile, infile):
     while 1:
-        data = infile.read(512)
-        if (data):
+        if data := infile.read(512):
             outfile.write(data)
         else:
             break
